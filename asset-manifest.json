@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/btw-app/static/css/main.3e1876a7.css",
+    "main.js": "/btw-app/static/js/main.306f74a8.js",
+    "index.html": "/btw-app/index.html",
+    "main.3e1876a7.css.map": "/btw-app/static/css/main.3e1876a7.css.map",
+    "main.306f74a8.js.map": "/btw-app/static/js/main.306f74a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e1876a7.css",
+    "static/js/main.306f74a8.js"
+  ]
+}
