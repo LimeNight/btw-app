@@ -1,0 +1,8 @@
+@use './global.scss' as g;
+
+#logo{
+    font-family: g.$myfont2;
+    background: g.$gradient-2;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

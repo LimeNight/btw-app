@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Climate+Crisis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Climate+Crisis&display=swap");
+#logo {
+  font-family: "Climate Crisis", sans-serif;
+  background: linear-gradient(73deg, rgb(163, 230, 203) 0%, rgb(4, 220, 216) 40%, rgb(0, 184, 208) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.car-preview img {
+  height: clamp(300px, 100%, 50vh);
+  width: clamp(300px, 100%, 50vw);
+}
+
+* {
+  font-family: "Cabin", sans-serif;
+}
+
+html, body, #root {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  position: relative;
+}/*# sourceMappingURL=style.css.map */

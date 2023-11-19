@@ -1,0 +1,4 @@
+.car-preview img {
+  height: clamp(300px, 100%, 50vh);
+  width: clamp(300px, 100%, 50vw);
+}/*# sourceMappingURL=carpreview.css.map */
