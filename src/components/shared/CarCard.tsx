@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Car } from '../../models/Car'
 import Rating from './Rating'
-import { useRef } from 'react';
+import { useCallback, useRef } from 'react';
 
 interface CardProps extends Car {
     className?: string,
@@ -11,14 +11,14 @@ interface CardProps extends Car {
 const CarCard = ({ _id, brand, type, color, category, seats, releaseYear, engine, fuel, doors, description, transmission, lugSize, offer, image, rate, className, linkAble = false }: CardProps) => {
     const attrUlElement = useRef<HTMLUListElement>(null!)
     const attrDescElement = useRef<HTMLDivElement>(null!)
-    const toggleAttributesList = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const toggleAttributesList = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.currentTarget.ariaExpanded === 'true' ? e.currentTarget.ariaExpanded = 'false' : e.currentTarget.ariaExpanded = 'true'
         attrUlElement.current.classList.toggle('hidden')
-    }
-    const toggleDescriptionList = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    },[attrUlElement])
+    const toggleDescriptionList = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.currentTarget.ariaExpanded === 'true' ? e.currentTarget.ariaExpanded = 'false' : e.currentTarget.ariaExpanded = 'true'
         attrDescElement.current.classList.toggle('hidden')
-    }
+    },[])
 
     return (
         <div className={`trasition duration-200 w-full bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 mx-auto ${className}`}>
@@ -243,6 +243,17 @@ const CarCard = ({ _id, brand, type, color, category, seats, releaseYear, engine
                             <li>{offer?.dayTo}</li>
                             <li>{offer?.price}</li>
                         </ul>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                            onClick={(_id) => {
+                                
+                            }}
+                        >
+                            Érdekel
+                        </button>
                     </li>
                 </ul>
             </div>
