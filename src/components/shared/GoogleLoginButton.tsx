@@ -39,7 +39,6 @@ const GoogleLoginButton = () => {
             picture: '',
             isAuthenticated: false,
         })
-        sessionStorage.removeItem('user')
     }
 
     useEffect(() => {
@@ -68,7 +67,7 @@ const GoogleLoginButton = () => {
         return (
             <button
                 className={GoggleBtnClass}
-                onClick={() => googleLogin()}
+                onClick={googleLogin}
             >
                 <GoogleIconSVG />
                 <p className="hidden md:block pr-2 whitespace-nowrap">Sign-in</p>
@@ -79,7 +78,7 @@ const GoogleLoginButton = () => {
     return (
         <button
             className={GoggleBtnClass}
-            onClick={() => logout()}
+            onClick={logout}
         >
             <img src={user.picture} alt={user.name} className="w-7 h-7 rounded-lg" style={{boxShadow: '0 0 5px #888'}}/>
             <p className="hidden md:inline-block pr-2">Logout</p>
